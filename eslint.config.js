@@ -5,7 +5,6 @@ import markdown from "@eslint/markdown";
 import css from "@eslint/css";
 import shell from "@eslint/shell";
 import { defineConfig } from "eslint/config";
-import someConfig from "some-other-config-you-use";
 import eslintConfigPrettier from "eslint-config-prettier/flat";
 export default defineConfig([
   {
@@ -50,6 +49,5 @@ export default defineConfig([
     language: "shell/bash",
     extends: ["shell/recommended"],
   },
-  someConfig,
   eslintConfigPrettier,
 ]);
