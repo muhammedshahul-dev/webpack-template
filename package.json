@@ -8,19 +8,34 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "deploy": "git subtree push --prefix dist origin gh-pages"
+    "deploy": "git subtree push --prefix dist origin gh-pages",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "muhammedshahull",
   "license": "ISC",
   "devDependencies": {
+    "@eslint/css": "^2.0.1",
+    "@eslint/js": "^10.0.1",
+    "@eslint/json": "^2.1.1",
+    "@eslint/markdown": "^9.0.0",
+    "@eslint/shell": "^0.1.2",
     "css-loader": "^7.1.5",
+    "eslint": "^10.15.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.14.0",
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.8",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "prettier": "3.10.1",
     "style-loader": "^4.0.0",
     "webpack": "^5.113.0",
     "webpack-cli": "^7.3.1",
     "webpack-dev-server": "^6.1.0",
     "webpack-merge": "^6.0.1"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
